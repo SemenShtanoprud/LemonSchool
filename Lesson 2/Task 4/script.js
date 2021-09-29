@@ -1,21 +1,20 @@
 // В переменной month лежит какое-то число из интервала от 1 до 12. Определите в какую пору года попадает этот месяц (зима, лето, весна, осень).
 
 let month = +prompt('Введите число между 1 и 12', '');
-if (month == 12 || month == 1 && month == 2) {
+
+const isWinter = month === 1 || month === 2 || month === 12;
+const isSpring = month === 3 || month === 4 || month === 5;
+const isSummer = month === 6 || month === 7 || month === 8;
+const isAutumn = month === 9 || month === 10 || month === 11;
+
+if (isWinter) {
     alert("Месяц " + month + " - зима")
-    console.log("Месяц " + month + " - зима");
-} else if (month >= 3 && month <= 5) {
+} else if (isSpring) {
     alert("Месяц " + month + " - весна")
-    console.log("Месяц " + month + " - весна");
-    // break;
-} else if (month >= 6 && month <= 8) {
+} else if (isSummer) {
     alert("Месяц " + month + " - лето")
-    console.log("Месяц " + month + " - лето");
-    // break;
-} else if (month >= 9 && month <= 11) {
+} else if (isAutumn) {
     alert("Месяц " + month + " - осень")
-    console.log("Месяц " + month + " - осень");
 } else {
     alert("Вы ввели некорректное число")
-    console.log("Вы ввели некорректное число");
 }

@@ -17,9 +17,12 @@ let browser;
 //         break;
 // }
 
-if (browser == "Edge") {
+let browserEdge = browser === "Edge";
+let browsers = browser === "Chrome" || browser === "Firefox" || browser === "Safari" || browser === "Opera";
+
+if (browserEdge) {
     alert("You've got the Edge!")
-} else if (browser == "Chrome" || browser == "Firefox" || browser == "Safari" || browser == "Opera") {
+} else if (browsers) {
     alert('Okay we support these browsers too')
 } else {
     alert("We hope that this page looks ok!")
